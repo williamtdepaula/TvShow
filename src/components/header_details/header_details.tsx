@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import {View, StyleSheet, ImageBackground, Text, Dimensions} from 'react-native';
+import React, { FC } from 'react';
+import { View, StyleSheet, ImageBackground, Text, Dimensions } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 interface IHeaderDetailsProps {
@@ -12,9 +12,9 @@ interface IHeaderDetailsProps {
 const HeaderDetails: FC<IHeaderDetailsProps> = (props) => {
     return (
         <View style={styles.container}>
-            <ImageBackground 
-                source={{uri: props.backgroundImageUrl}} 
-                style={styles.imageBackground} 
+            <ImageBackground
+                source={{ uri: props.backgroundImageUrl }}
+                style={styles.imageBackground}
                 resizeMode='cover'
             >
                 <LinearGradient colors={['transparent', '#1a1919']} style={styles.containerInsideBackgroundImage}>
@@ -24,7 +24,7 @@ const HeaderDetails: FC<IHeaderDetailsProps> = (props) => {
             </ImageBackground>
         </View>
     );
-} 
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -34,20 +34,23 @@ const styles = StyleSheet.create({
     imageBackground: {
         flex: 1,
     },
-    containerInsideBackgroundImage:{
+    containerInsideBackgroundImage: {
         flex: 1,
-        justifyContent:"flex-end",
-        padding: 16
+        justifyContent: "flex-end",
+        padding: 16,
+        flexWrap: 'wrap',
     },
     txtTitle: {
         fontSize: 40,
         fontWeight: 'bold',
-        color:'#fff',
-        marginBottom: 10
+        color: '#fff',
+        marginBottom: 10,
+        flexWrap: 'wrap',
     },
     txtGenresAndYear: {
         fontSize: 16,
-        color:'#fff'
+        color: '#fff',
+        flexWrap: 'wrap',
     }
 })
 
