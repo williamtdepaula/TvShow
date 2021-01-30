@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import { View, StyleSheet, ImageBackground, Text, Dimensions } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { Genre } from '../../store/ducks/tv_show/types';
 
 interface IHeaderDetailsProps {
     backgroundImageUrl: string;
     title: string;
-    genres: string;
+    genres: Genre[];
     year: number;
 }
 
@@ -19,7 +20,7 @@ const HeaderDetails: FC<IHeaderDetailsProps> = (props) => {
             >
                 <LinearGradient colors={['transparent', '#1a1919']} style={styles.containerInsideBackgroundImage}>
                     <Text style={styles.txtTitle}>{props.title}</Text>
-                    <Text style={styles.txtGenresAndYear}>{`${props.genres} / ${props.year}`}</Text>
+                    <Text style={styles.txtGenresAndYear}>{`${props.genres.map((genre: Genre) => genre.Title).join(', ')} / ${props.year}`}</Text>
                 </LinearGradient>
             </ImageBackground>
         </View>

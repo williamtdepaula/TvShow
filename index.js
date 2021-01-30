@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import TvShowDetails from './src/screens/tv_show_details';
 import {name as appName} from './app.json';
+import App from './App';
 
-AppRegistry.registerComponent(appName, () => TvShowDetails);
+AppRegistry.registerComponent(appName, () => App);

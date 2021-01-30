@@ -1,6 +1,7 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { View, StyleSheet, Text, Platform, UIManager, LayoutAnimation, Pressable } from 'react-native';
 import FastImage from 'react-native-fast-image'
+import { Episode } from '../../../store/ducks/tv_show/types';
 
 if (Platform.OS === 'android') {
     if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -8,20 +9,29 @@ if (Platform.OS === 'android') {
     }
 }
 
-const ItemEpsode: FC = () => {
+interface IItemEpisodeProps {
+    episode: Episode;
+    onOpenEpisode: () => void;
+}
+
+const ItemEpisode: FC<IItemEpisodeProps> = ({ episode, onOpenEpisode }) => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
+
+    useEffect(() => {
+        if(showDetails) onOpenEpisode();
+    }, [showDetails]);
 
     function openOrCloseDetails(): void {
         //Animation open or close details
         LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-        setShowDetails((old: boolean) => !old)
+        setShowDetails((old: boolean) => !old);
     }
 
     return (
         <View style={styles.container}>
             <Pressable onPress={openOrCloseDetails}>
                 <View style={styles.containerTitle}>
-                    <Text style={styles.txtTitle}>1 Teste</Text>
+                    <Text style={styles.txtTitle}>{`${episode.EpisodeNumber} ${episode.Title}`}</Text>
                 </View>
             </Pressable>
             {showDetails &&
@@ -29,10 +39,10 @@ const ItemEpsode: FC = () => {
                     <View style={styles.containerImage}>
                         <FastImage
                             style={styles.image}
-                            source={{ uri: 'https://occ-0-894-1123.1.nflxso.net/art/e0e90/292975320f88a9f3fc741c132d0ec2ac20ce0e90.webp' }}
+                            source={{ uri: episode.Image }}
                         />
                     </View>
-                    <Text style={styles.txtSynopsi}>Londres, 1891. A polícia investiga uma série de assassinatos, mas Sir Malcolm Murray e a bela Vanessa Ives sabem que há algo mais sombrio por trás de tudo.</Text>
+                    <Text style={styles.txtSynopsi}>{episode.Synopsis}</Text>
                 </View>
             }
         </View>
@@ -73,4 +83,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ItemEpsode;
+export default ItemEpisode;

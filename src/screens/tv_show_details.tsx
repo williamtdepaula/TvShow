@@ -1,27 +1,66 @@
-import React, { FC } from 'react';
-import { View, StyleSheet, SafeAreaView, Text } from 'react-native';
-import Cast from '../components/cast';
+import React, { FC, useEffect } from 'react';
+import { View, StyleSheet, SafeAreaView, Text, Alert, ActivityIndicator } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
+import CastDetails from '../components/cast_deatails';
+import Error from '../components/error';
 import HeaderDetails from '../components/header_details';
 import SeasonTabs from '../components/season_tab';
+import { getTvShowData } from '../store/ducks/tv_show/actions';
+import { ApplicationState } from '../store/ducks/tv_show/store';
+import { TvShowDetail } from '../store/ducks/tv_show/types';
 
 const TvShowDetails: FC = () => {
+
+    const dispatch = useDispatch();
+
+    const tvShowDetailsData: TvShowDetail = useSelector((state: ApplicationState) => state.tvShowDetails.tvShowDetail);
+    const loadingTvShowDetailsData: boolean = useSelector((state: ApplicationState) => state.tvShowDetails.loading);
+    const errorTvShowDetailsData: boolean = useSelector((state: ApplicationState) => state.tvShowDetails.error);
+
+    useEffect(() => {
+        requestTvShowData();
+    }, []);
+
+    function requestTvShowData(): void {
+        dispatch(getTvShowData());
+    }
+
     return (
         <View style={styles.container}>
-            <SafeAreaView>
-                <HeaderDetails
-                    backgroundImageUrl={'https://occ-0-894-1123.1.nflxso.net/art/0ef00/005f864851e4be98e96f55020ce769fba680ef00.jpg'}
-                    title='Peny Dreadful'
-                    genres='Teste, Testado'
-                    year={2015}
-                />
-                <Text style={styles.synopsi}>
-                    Contos de personagens clássicos como Drácula, Frankenstein e Dorian Gray estão reunidos nesta série de terror ambientada nas ruas da Londres vitoriana.
-                </Text>
-                <Cast
-                    cast={['teste', 'teste1', 'abc', 'sads', 'test', 'asdasdasd']}
-                />
-            </SafeAreaView>
-            <SeasonTabs />
+            {loadingTvShowDetailsData
+                ?
+                <ActivityIndicator size='large' color='#fff' />
+                :
+                (tvShowDetailsData.ID && !errorTvShowDetailsData)
+                    ?
+                    <>
+                        <SafeAreaView>
+                            <HeaderDetails
+                                backgroundImageUrl={tvShowDetailsData.Images.Background}
+                                title={tvShowDetailsData.Title}
+                                genres={tvShowDetailsData.Genres}
+                                year={tvShowDetailsData.Year}
+                            />
+                            <Text style={styles.synopsi}>
+                                {tvShowDetailsData.Synopsis}
+                            </Text>
+                            <CastDetails
+                                cast={tvShowDetailsData.Cast}
+                            />
+                        </SafeAreaView>
+                        <SeasonTabs />
+                    </>
+                    :
+                    errorTvShowDetailsData
+                        ?
+                        <Error
+                            text='Ops! houve um problema!'
+                            onPressToTryAgain={requestTvShowData}
+                        />
+                        :
+                        <></>
+            }
+
         </View>
     );
 }

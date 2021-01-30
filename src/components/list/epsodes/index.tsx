@@ -1,5 +1,5 @@
-import EpsodesList from "./epsodes_list";
-import ItemEpsode from "./item_epsode";
+import EpisodesList from "./epsodes_list";
+import ItemEpisode from "./item_episode";
 
-export default EpsodesList;
-export { ItemEpsode };
+export default EpisodesList;
+export { ItemEpisode };

@@ -1,23 +1,19 @@
 import React, { FC } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import { Cast } from '../../store/ducks/tv_show/types';
 
-interface ICastProps {
-    cast: string[];
+interface ICastDetailsProps {
+    cast: Cast[];
 }
 
-const Cast: FC<ICastProps> = (props) => {
-
-    function _handlerRenderCast() : Element[] {
-        return props.cast.map((cast: string, index: number) => <Text key={index} style={styles.txtCast}>{cast + ((index < props.cast.length - 1) ? ', ' : '')}</Text>);
-    }
-
+const CastDetails: FC<ICastDetailsProps> = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.containerTitleCast}>
                 <Text style={styles.titleCast}>Elenco:</Text>
             </View>
             <View style={styles.containerCast}>
-                {_handlerRenderCast()}
+                <Text style={styles.txtCast}>{props.cast.map((cast: Cast) => cast.Name).join(', ')}</Text>
             </View>
         </View>
     );
@@ -46,4 +42,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Cast;
+export default CastDetails;
