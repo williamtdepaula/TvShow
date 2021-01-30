@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { View, StyleSheet, SafeAreaView, Text } from 'react-native';
 import Cast from '../components/cast';
 import HeaderDetails from '../components/header_details';
-import TabViewExample from '../components/season_tab_view/season_tab_view';
+import SeasonTabs from '../components/season_tab';
 
 const TvShowDetails: FC = () => {
     return (
@@ -21,8 +21,7 @@ const TvShowDetails: FC = () => {
                     cast={['teste', 'teste1', 'abc', 'sads', 'test', 'asdasdasd']}
                 />
             </SafeAreaView>
-
-            <TabViewExample />
+            <SeasonTabs />
         </View>
     );
 }

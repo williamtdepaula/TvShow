@@ -1,4 +1,4 @@
-import React, { Component, FC, PropsWithChildren } from 'react';
+import React, { FC } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
 interface ICastProps {
@@ -26,6 +26,7 @@ const Cast: FC<ICastProps> = (props) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        padding: 10,
     },
     containerTitleCast: {
         flex: 1,
@@ -36,8 +37,8 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
     },
     titleCast: {
-        color: '#098',
-        fontSize: 16,
+        color: '#8580CC',
+        fontSize: 18,
     },
     txtCast: {
         color: '#fff',

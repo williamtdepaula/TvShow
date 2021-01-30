@@ -38,19 +38,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "flex-end",
         padding: 16,
-        flexWrap: 'wrap',
     },
     txtTitle: {
         fontSize: 40,
         fontWeight: 'bold',
         color: '#fff',
         marginBottom: 10,
-        flexWrap: 'wrap',
     },
     txtGenresAndYear: {
         fontSize: 16,
         color: '#fff',
-        flexWrap: 'wrap',
     }
 })
 
