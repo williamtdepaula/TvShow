@@ -7,9 +7,7 @@ const api = axios.create({
 async function getTvShowData() {
 
     try {
-        var random_boolean = Math.random() < 0.5;
-
-        let res = await api.get(random_boolean ? '/tv-shows/SHOW123.js' : '/tv-shows/SHOW123.json');
+        let res = await api.get('/tv-shows/SHOW123.json');
 
         return res.data
     } catch (e) {

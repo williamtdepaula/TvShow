@@ -18,7 +18,7 @@ const ItemEpisode: FC<IItemEpisodeProps> = ({ episode, onOpenEpisode }) => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
 
     useEffect(() => {
-        if(showDetails) onOpenEpisode();
+        if (showDetails) onOpenEpisode();
     }, [showDetails]);
 
     function openOrCloseDetails(): void {
@@ -75,11 +75,13 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
+        backgroundColor: "#292929",
     },
     txtSynopsi: {
+        flex: 1,
         fontSize: 16,
         color: '#fff',
-        flex: 1,
+        fontFamily: 'Nunito-Regular',
     }
 });
 

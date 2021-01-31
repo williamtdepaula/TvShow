@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { View, StyleSheet, ImageBackground, Text, Dimensions } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import LinearGradient from 'react-native-linear-gradient';
 import { Genre } from '../../store/ducks/tv_show/types';
 
@@ -13,7 +14,7 @@ interface IHeaderDetailsProps {
 const HeaderDetails: FC<IHeaderDetailsProps> = (props) => {
     return (
         <View style={styles.container}>
-            <ImageBackground
+            <FastImage
                 source={{ uri: props.backgroundImageUrl }}
                 style={styles.imageBackground}
                 resizeMode='cover'
@@ -22,18 +23,18 @@ const HeaderDetails: FC<IHeaderDetailsProps> = (props) => {
                     <Text style={styles.txtTitle}>{props.title}</Text>
                     <Text style={styles.txtGenresAndYear}>{`${props.genres.map((genre: Genre) => genre.Title).join(', ')} / ${props.year}`}</Text>
                 </LinearGradient>
-            </ImageBackground>
+            </FastImage>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
         height: Dimensions.get('window').height * 0.3,
     },
     imageBackground: {
         flex: 1,
+        backgroundColor: '#292929'
     },
     containerInsideBackgroundImage: {
         flex: 1,
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#fff',
         marginBottom: 10,
+        fontFamily: 'Nunito-Regular',
     },
     txtGenresAndYear: {
         fontSize: 16,

@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from 'react';
-import { View, StyleSheet, SafeAreaView, Text, Alert, ActivityIndicator } from 'react-native';
+import { View, StyleSheet, SafeAreaView, Text, ActivityIndicator } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import CastDetails from '../components/cast_deatails';
 import Error from '../components/error';
@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#000',
+        justifyContent: "center",
+        alignItems: 'center',
     },
     synopsi: {
         color: '#fff',

@@ -20,6 +20,7 @@
 		503673C75EE6D5775424A561 /* libPods-TvShow-TvShowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15417380687EC564D967481E /* libPods-TvShow-TvShowTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		CB35542BFAFDFE0D447C8446 /* libPods-TvShow-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93035E1398C044EE60DEF83B /* libPods-TvShow-tvOS.a */; };
+		ED5A779952FA48A58C9200F7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E77BD32FCB7F4A89BEF045A7 /* Nunito-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,17 +52,31 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TvShow/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TvShow/main.m; sourceTree = "<group>"; };
 		15417380687EC564D967481E /* libPods-TvShow-TvShowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TvShow-TvShowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C26C83F4EC8421C9D62BC7D /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
 		1EE44A83D31327796AC6D188 /* Pods-TvShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow.debug.xcconfig"; path = "Target Support Files/Pods-TvShow/Pods-TvShow.debug.xcconfig"; sourceTree = "<group>"; };
+		20F5C48033EE4AF7BAE30531 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BoldItalic.ttf"; path = "../assets/fonts/Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 		231CE80EC9AC5A1D3187B584 /* Pods-TvShow-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TvShow-tvOS/Pods-TvShow-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* TvShow-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TvShow-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* TvShow-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TvShow-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C28F77689001587054F90B5 /* libPods-TvShow-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TvShow-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		422583EC499E4AC3966188E1 /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLightItalic.ttf"; path = "../assets/fonts/Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		5009AB233CDD4AF18BA6AE5C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-LightItalic.ttf"; path = "../assets/fonts/Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		549F2D0C230747DEAA531CC0 /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
+		6A6C39B22B85470E8A8E05C5 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		753B46C635914D419562C200 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBoldItalic.ttf"; path = "../assets/fonts/Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		7D2F5133A779699852A10502 /* libPods-TvShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TvShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TvShow/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93035E1398C044EE60DEF83B /* libPods-TvShow-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TvShow-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0A0A01B67BE4550A70A30FD /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBoldItalic.ttf"; path = "../assets/fonts/Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A2B01DE5A2E14117821D1645 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		AC3573ACFE394277B2F21212 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Italic.ttf"; path = "../assets/fonts/Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		C2C59AC58A0642CA4BCF1C25 /* Pods-TvShow-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TvShow-tvOSTests/Pods-TvShow-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB2B5024B9A745088D44D11F /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLight.ttf"; path = "../assets/fonts/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		E1784D55C643B8B3987CEB95 /* Pods-TvShow-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TvShow-tvOS/Pods-TvShow-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E4612254F2B08579B027C6D0 /* Pods-TvShow-TvShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow-TvShowTests.release.xcconfig"; path = "Target Support Files/Pods-TvShow-TvShowTests/Pods-TvShow-TvShowTests.release.xcconfig"; sourceTree = "<group>"; };
+		E4B3D11278924B8190A464B3 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BlackItalic.ttf"; path = "../assets/fonts/Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E62DF9F2726B4CCFABDA3FC2 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		E77BD32FCB7F4A89BEF045A7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		E9BCB3CC538D834090A41F8C /* Pods-TvShow-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TvShow-tvOSTests/Pods-TvShow-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		EAAB6AA1FD91A9BF59DE753A /* Pods-TvShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvShow.release.xcconfig"; path = "Target Support Files/Pods-TvShow/Pods-TvShow.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -165,6 +180,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E02514418DC653DF1C1882A1 /* Pods */,
+				F486ED6FDD324DD7B324C51B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,8 +210,28 @@
 				C2C59AC58A0642CA4BCF1C25 /* Pods-TvShow-tvOSTests.debug.xcconfig */,
 				E9BCB3CC538D834090A41F8C /* Pods-TvShow-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F486ED6FDD324DD7B324C51B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				549F2D0C230747DEAA531CC0 /* Nunito-Black.ttf */,
+				E4B3D11278924B8190A464B3 /* Nunito-BlackItalic.ttf */,
+				A2B01DE5A2E14117821D1645 /* Nunito-Bold.ttf */,
+				20F5C48033EE4AF7BAE30531 /* Nunito-BoldItalic.ttf */,
+				6A6C39B22B85470E8A8E05C5 /* Nunito-ExtraBold.ttf */,
+				753B46C635914D419562C200 /* Nunito-ExtraBoldItalic.ttf */,
+				CB2B5024B9A745088D44D11F /* Nunito-ExtraLight.ttf */,
+				422583EC499E4AC3966188E1 /* Nunito-ExtraLightItalic.ttf */,
+				AC3573ACFE394277B2F21212 /* Nunito-Italic.ttf */,
+				1C26C83F4EC8421C9D62BC7D /* Nunito-Light.ttf */,
+				5009AB233CDD4AF18BA6AE5C /* Nunito-LightItalic.ttf */,
+				E77BD32FCB7F4A89BEF045A7 /* Nunito-Regular.ttf */,
+				E62DF9F2726B4CCFABDA3FC2 /* Nunito-SemiBold.ttf */,
+				A0A0A01B67BE4550A70A30FD /* Nunito-SemiBoldItalic.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +378,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				ED5A779952FA48A58C9200F7 /* Nunito-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2AB08FD2DD06E7A5D6F4949E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

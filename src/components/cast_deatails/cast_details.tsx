@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     containerCast: {
-        flex: 1,
+        flex: 3,
         flexDirection: 'row',
         flexWrap: 'wrap',
     },
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     txtCast: {
         color: '#fff',
-        fontSize: 16,
+        fontSize: 18,
     }
 });
 
