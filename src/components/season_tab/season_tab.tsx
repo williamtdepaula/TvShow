@@ -23,15 +23,20 @@ const SeasonTabs: FC = () => {
         return seasons.map((season: number) => `T${season}`);
     }
 
-    function handlerRenderEpisodesTab() {
+    function handlerRenderEpisodesTab(): Element[] {
         return getAllSeasons().map((season: number, i: number) => <EpisodesList key={i} season={season} />);
     }
 
     return (
         <ScrollableTabView
-            renderTabBar={(props) => <Tabs onPressTab={props.goToPage} currentTabFocusedIndex={props.activeTab} seasonTabs={getTextSeasons()} />}
+            renderTabBar={(props) =>
+                <Tabs
+                    onPressTab={props.goToPage}
+                    currentTabFocusedIndex={props.activeTab}
+                    seasonTabs={getTextSeasons()}
+                />
+            }
         >
-
             {handlerRenderEpisodesTab()}
         </ScrollableTabView>
     );

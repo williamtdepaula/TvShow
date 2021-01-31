@@ -9,7 +9,7 @@ import { getTvShowData } from '../store/ducks/tv_show/actions';
 import { ApplicationState } from '../store/ducks/tv_show/store';
 import { TvShowDetail } from '../store/ducks/tv_show/types';
 
-const TvShowDetails: FC = () => {
+const TvShowDetailsScreens: FC = () => {
 
     const dispatch = useDispatch();
 
@@ -79,8 +79,4 @@ const styles = StyleSheet.create({
     }
 })
 
-
-export default TvShowDetails;
-
-
-//https://occ-0-894-1123.1.nflxso.net/art/0ef00/005f864851e4be98e96f55020ce769fba680ef00.jpg
+export default TvShowDetailsScreens;
