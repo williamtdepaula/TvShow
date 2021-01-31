@@ -32,7 +32,7 @@ const TvShowDetailsScreens: FC = () => {
                 ?
                 <LoadingIndicator />
                 :
-                (tvShowDetailsData.ID && !errorTvShowDetailsData)
+                tvShowDetailsData.ID
                     ?
                     <>
                         <SafeAreaView>

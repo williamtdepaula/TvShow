@@ -1,5 +1,5 @@
 import React, { FC, useRef } from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList, SafeAreaView } from 'react-native';
 import { useSelector } from 'react-redux';
 import { ApplicationState } from '../../../store/ducks/tv_show/store';
 import { Episode } from '../../../store/ducks/tv_show/types';
@@ -22,12 +22,14 @@ const EpisodesList: FC<IEpisodesListProps> = ({ season }) => {
 
     return (
         <View style={styles.container}>
-            <FlatList
-                ref={refListEpisodes}
-                data={tvShowEpisodes.filter((episode: Episode) => episode.SeasonNumber == season)}
-                keyExtractor={(item) => item.ID}
-                renderItem={({ item, index }) => <ItemEpisode episode={item} onOpenEpisode={() => scrollToEpisodeWhenExpanded(index)} />}
-            />
+            <SafeAreaView>
+                <FlatList
+                    ref={refListEpisodes}
+                    data={tvShowEpisodes.filter((episode: Episode) => episode.SeasonNumber == season)}
+                    keyExtractor={(item) => item.ID}
+                    renderItem={({ item, index }) => <ItemEpisode episode={item} onOpenEpisode={() => scrollToEpisodeWhenExpanded(index)} />}
+                />
+            </SafeAreaView>
         </View>
     );
 }

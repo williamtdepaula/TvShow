@@ -1,7 +1,9 @@
 import React, { FC, useState } from 'react';
-import { View, StyleSheet, Text, Platform, UIManager, LayoutAnimation, Pressable } from 'react-native';
+import { View, StyleSheet, Text, Platform, UIManager, LayoutAnimation, Pressable, Dimensions } from 'react-native';
 import FastImage from 'react-native-fast-image'
 import { Episode } from '../../../store/ducks/tv_show/types';
+
+const { height } = Dimensions.get('window');
 
 //To use LayoutAnimation on android
 if (Platform.OS === 'android') {
@@ -41,6 +43,7 @@ const ItemEpisode: FC<IItemEpisodeProps> = ({ episode, onOpenEpisode }) => {
                         <FastImage
                             style={styles.image}
                             source={{ uri: episode.Image }}
+                            resizeMode='cover'
                         />
                     </View>
                     <Text style={styles.txtSynopsi}>{episode.Synopsis}</Text>
@@ -73,13 +76,16 @@ const styles = StyleSheet.create({
     containerImage: {
         flex: 1,
         padding: 15,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     image: {
-        flex: 1,
+        width: "100%",
+        height: height * 0.1,
         backgroundColor: "#292929",
     },
     txtSynopsi: {
-        flex: 1,
+        flex: 1.5,
         fontSize: 16,
         color: '#fff',
         fontFamily: 'Nunito-Regular',
