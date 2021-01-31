@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { View, StyleSheet, ImageBackground, Text, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, Dimensions } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import LinearGradient from 'react-native-linear-gradient';
 import { Genre } from '../../store/ducks/tv_show/types';
@@ -9,7 +9,7 @@ interface IHeaderDetailsProps {
     title: string;
     genres: Genre[];
     year: number;
-}
+};
 
 const HeaderDetails: FC<IHeaderDetailsProps> = (props) => {
     return (
@@ -43,15 +43,14 @@ const styles = StyleSheet.create({
     },
     txtTitle: {
         fontSize: 40,
-        fontWeight: 'bold',
         color: '#fff',
         marginBottom: 10,
-        fontFamily: 'Nunito-Regular',
+        fontFamily: 'Nunito-Bold',
     },
     txtGenresAndYear: {
         fontSize: 16,
         color: '#fff',
     }
-})
+});
 
 export default HeaderDetails;

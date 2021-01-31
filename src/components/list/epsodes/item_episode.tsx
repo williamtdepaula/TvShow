@@ -1,8 +1,9 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { View, StyleSheet, Text, Platform, UIManager, LayoutAnimation, Pressable } from 'react-native';
 import FastImage from 'react-native-fast-image'
 import { Episode } from '../../../store/ducks/tv_show/types';
 
+//To use LayoutAnimation on android
 if (Platform.OS === 'android') {
     if (UIManager.setLayoutAnimationEnabledExperimental) {
         UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -12,18 +13,18 @@ if (Platform.OS === 'android') {
 interface IItemEpisodeProps {
     episode: Episode;
     onOpenEpisode: () => void;
-}
+};
 
 const ItemEpisode: FC<IItemEpisodeProps> = ({ episode, onOpenEpisode }) => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
 
-    useEffect(() => {
-        if (showDetails) onOpenEpisode();
-    }, [showDetails]);
-
     function openOrCloseDetails(): void {
         //Animation open or close details
-        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut, () => {
+            //When animation finished, will call function if showDetails is false
+            if (!showDetails) onOpenEpisode();
+        });
+
         setShowDetails((old: boolean) => !old);
     }
 

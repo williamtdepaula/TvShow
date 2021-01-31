@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import TvShowDetailsScreen from './screens/tv_show_details_screen'
+import React, { FC } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import TvShowDetailsScreen from './screens/tv_show_details_screen';
 
 const Stack = createStackNavigator();
 

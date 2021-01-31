@@ -10,7 +10,7 @@ import { TvShowState } from './types';
 
 export interface ApplicationState{
     tvShowDetails: TvShowState;
-}
+};
 
 const sagaMiddleware = createSagaMiddleware();
 

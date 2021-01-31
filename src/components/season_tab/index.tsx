@@ -1,5 +1,5 @@
-import SeasonTabs from "./season_tab";
-import Tabs from './tabs';
+import SeasonsTab from "./seasons_tab";
+import Tab from './tab';
 
-export default SeasonTabs;
-export { Tabs };
+export default SeasonsTab;
+export { Tab };

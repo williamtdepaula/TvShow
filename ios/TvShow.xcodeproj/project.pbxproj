@@ -19,6 +19,7 @@
 		4F3A0E125634B4A287B7BF7F /* libPods-TvShow-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C28F77689001587054F90B5 /* libPods-TvShow-tvOSTests.a */; };
 		503673C75EE6D5775424A561 /* libPods-TvShow-TvShowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15417380687EC564D967481E /* libPods-TvShow-TvShowTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A0EDE80325C72A25002C076B /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2B01DE5A2E14117821D1645 /* Nunito-Bold.ttf */; };
 		CB35542BFAFDFE0D447C8446 /* libPods-TvShow-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93035E1398C044EE60DEF83B /* libPods-TvShow-tvOS.a */; };
 		ED5A779952FA48A58C9200F7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E77BD32FCB7F4A89BEF045A7 /* Nunito-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -376,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EDE80325C72A25002C076B /* Nunito-Bold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				ED5A779952FA48A58C9200F7 /* Nunito-Regular.ttf in Resources */,

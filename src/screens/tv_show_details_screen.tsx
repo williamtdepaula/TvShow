@@ -1,11 +1,12 @@
 import React, { FC, useEffect } from 'react';
-import { View, StyleSheet, SafeAreaView, Text, ActivityIndicator } from 'react-native';
+import { View, StyleSheet, SafeAreaView, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import CastDetails from '../components/cast_deatails';
 import Error from '../components/error';
 import HeaderDetails from '../components/header_details';
-import SeasonTabs from '../components/season_tab';
-import { getTvShowData } from '../store/ducks/tv_show/actions';
+import LoadingIndicator from '../components/loading_indicator';
+import SeasonsTab from '../components/season_tab';
+import { loadRequestTvShowData } from '../store/ducks/tv_show/actions';
 import { ApplicationState } from '../store/ducks/tv_show/store';
 import { TvShowDetail } from '../store/ducks/tv_show/types';
 
@@ -22,14 +23,14 @@ const TvShowDetailsScreens: FC = () => {
     }, []);
 
     function requestTvShowData(): void {
-        dispatch(getTvShowData());
+        dispatch(loadRequestTvShowData());
     }
 
     return (
         <View style={styles.container}>
             {loadingTvShowDetailsData
                 ?
-                <ActivityIndicator size='large' color='#fff' />
+                <LoadingIndicator />
                 :
                 (tvShowDetailsData.ID && !errorTvShowDetailsData)
                     ?
@@ -48,7 +49,7 @@ const TvShowDetailsScreens: FC = () => {
                                 cast={tvShowDetailsData.Cast}
                             />
                         </SafeAreaView>
-                        <SeasonTabs />
+                        <SeasonsTab />
                     </>
                     :
                     errorTvShowDetailsData
@@ -69,14 +70,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#000',
-        justifyContent: "center",
-        alignItems: 'center',
     },
     synopsi: {
         color: '#fff',
         fontSize: 16,
         padding: 10,
     }
-})
+});
 
 export default TvShowDetailsScreens;

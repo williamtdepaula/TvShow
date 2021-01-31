@@ -5,7 +5,7 @@ import TextButton from '../button';
 interface IErrorProps {
     text: string;
     onPressToTryAgain: () => void;
-}
+};
 
 const Error: FC<IErrorProps> = ({ text, onPressToTryAgain }) => {
 
