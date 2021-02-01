@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Dimensions, StyleSheet } from 'react-native';
 import Tab from './tab';
-import EpisodesList from '../list/epsodes';
+import EpisodesList from '../list/episodes';
 import { useSelector } from 'react-redux';
 import { Episode } from '../../store/ducks/tv_show/types';
 import { ApplicationState } from '../../store/ducks/tv_show/store';

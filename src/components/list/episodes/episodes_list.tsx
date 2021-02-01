@@ -14,9 +14,9 @@ const EpisodesList: FC<IEpisodesListProps> = ({ season }) => {
 
     const tvShowEpisodes: Episode[] = useSelector((state: ApplicationState) => state.tvShowDetails.episodes);
 
-    function scrollToEpisodeWhenExpanded(index: number): void {
+    function scrollToEpisodeWhenExpanded(episode: Episode): void {
         if (refListEpisodes.current) {
-            refListEpisodes.current.scrollToIndex({ index, animated: true });
+            refListEpisodes.current.scrollToItem({ item: episode, animated: true });
         }
     }
 
@@ -27,7 +27,7 @@ const EpisodesList: FC<IEpisodesListProps> = ({ season }) => {
                     ref={refListEpisodes}
                     data={tvShowEpisodes.filter((episode: Episode) => episode.SeasonNumber == season)}
                     keyExtractor={(item) => item.ID}
-                    renderItem={({ item, index }) => <ItemEpisode episode={item} onOpenEpisode={() => scrollToEpisodeWhenExpanded(index)} />}
+                    renderItem={({ item }) => <ItemEpisode episode={item} onOpenEpisode={() => scrollToEpisodeWhenExpanded(item)} />}
                 />
             </SafeAreaView>
         </View>

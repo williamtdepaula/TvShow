@@ -1,4 +1,4 @@
-import EpisodesList from "./epsodes_list";
+import EpisodesList from "./episodes_list";
 import ItemEpisode from "./item_episode";
 
 export default EpisodesList;

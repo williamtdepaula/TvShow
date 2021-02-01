@@ -3,6 +3,7 @@ export enum TvShowTypes {
     LOAD_REQUEST_TV_SHOW_DATA = "@tv_show/LOAD_REQUEST_TV_SHOW_DATA",
     LOAD_SUCCESS_TV_SHOW_DATA = '@tv_show/LOAD_SUCCESS_TV_SHOW_DATA',
     LOAD_FAILURE_TV_SHOW_DATA = "@tv_show/LOAD_FAILURE_TV_SHOW_DATA",
+    CHANGE_EPISODE_FOCUSED = '@tv_show/CHANGE_EPISODE_FOCUSED',
 };
 
 //Data types
@@ -44,6 +45,7 @@ export interface Episode{
 export interface TvShowState {
     readonly tvShowDetail: TvShowDetail;
     readonly episodes: Episode[];
+    readonly idEpisodeFocused: string | null;
     readonly loading: boolean;
     readonly error: boolean;
 } 
